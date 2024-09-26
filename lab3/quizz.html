@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Porto</title>
+</head>
+
+<body>
+    <header>
+        <h1>Porto</h1>
+    </header>
+    <main>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="local.html">Localização</a>
+            <a href="multimedia.html">Multimédia</a>
+            <a href="info.html">Informação</a>
+            <a href="quizz.html">Quizz</a>
+            <a href="viagem.html">Viagem</a>
+        </nav>
+        <img src="images/porto.JPG" alt="Porto">
+        <h2>Quizz</h2>
+        <form method="get" action="https://postman-echo.com/get">
+
+            <fieldset>
+                <legend>Informações Pessoais</legend>
+                <p>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required><br>
+                </p>
+                <p>
+                    <label for="sobrenome">Apelido:</label>
+                    <input type="text" id="sobrenome" name="sobrenome" required><br>
+                </p>
+                <p>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Quizz sobre o Porto</legend>
+
+                <label>Qual é o famoso rio que passa pelo Porto?</label><br>
+                <input type="radio" id="douro" name="rio" value="Douro">
+                <label for="douro">Douro</label><br>
+                <input type="radio" id="tejo" name="rio" value="Tejo">
+                <label for="tejo">Tejo</label><br>
+                <input type="radio" id="minho" name="rio" value="Minho">
+                <label for="minho">Minho</label><br><br>
+
+                <label>Selecione os pontos turísticos famosos do Porto:</label><br>
+                <input type="checkbox" id="clerigos" name="monumento" value="Torre dos Clérigos">
+                <label for="clerigos">Torre dos Clérigos</label><br>
+                <input type="checkbox" id="serralves" name="monumento" value="Fundação de Serralves">
+                <label for="serralves">Fundação de Serralves</label><br>
+                <input type="checkbox" id="livraria" name="monumento" value="Livraria Lello">
+                <label for="livraria">Livraria Lello</label><br><br>
+
+                <label for="populacao">Qual é a população aproximada do Porto?</label>
+                <select id="populacao" name="populacao">
+                    <option value="200000">200,000</option>
+                    <option value="500000">500,000</option>
+                    <option value="1000000">1,000,000</option>
+                </select><br><br>
+
+                <label for="visitadata">Quando foi a última vez que visitou o Porto?</label>
+                <input type="date" id="visitadata" name="visitadata"><br><br>
+
+                <label for="satisfacao">Quão satisfeito está com a cidade do Porto?</label>
+                <input type="range" id="satisfacao" name="satisfacao" min="0" max="10"><br><br>
+            </fieldset>
+
+            <p>
+                <input type="submit" value="Submeter">
+                <input type="reset" value="Limpar">
+            </p>
+
+        </form>
+    </main>
+    <footer>
+        <p>DIW 2024</p>
+    </footer>
+</body>
+
+</html>
