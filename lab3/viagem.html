@@ -25,35 +25,37 @@
 
             <fieldset>
                 <legend>Informações Pessoais</legend>
-
                 <p>
                     <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" required><br>
+                    <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" autocomplete="name" maxlength="50" size="30" required autofocus><br>
                 </p>
-
                 <p>
                     <label for="sobrenome">Apelido:</label>
-                    <input type="text" id="sobrenome" name="sobrenome" required><br>
+                    <input type="text" id="sobrenome" name="sobrenome" placeholder="Digite o seu apelido" autocomplete="family-name" maxlength="50" size="30" required autofocus><br>
                 </p>
-
                 <p>
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" placeholder="Digite o seu email" required>
                 </p>
-
             </fieldset>
 
             <fieldset>
                 <legend>Detalhes da Viagem</legend>
 
-                <label for="datapartida">Data de Partida:</label>
-                <input type="date" id="datapartida" name="datapartida" required><br>
+                <p>
+                    <label for="datapartida">Data de Partida:</label>
+                    <input type="date" id="datapartida" name="datapartida" required><br>
+                </p>
 
-                <label for="dataregresso">Data de Regresso:</label>
-                <input type="date" id="dataregresso" name="dataregresso"><br>
+                <p>
+                    <label for="dataregresso">Data de Regresso:</label>
+                    <input type="date" id="dataregresso" name="dataregresso"><br>
+                </p>
 
-                <label for="passageiros">Número de Passageiros:</label>
-                <input type="number" id="passageiros" name="passageiros" min="1"><br>
+                <p>
+                    <label for="passageiros">Número de Passageiros:</label>
+                    <input type="number" id="passageiros" name="passageiros" min="1"><br>
+                </p>
 
                 <label for="transporte">Meio de Transporte Favorito:</label>
                 <select id="transporte" name="transporte">

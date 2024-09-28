@@ -27,15 +27,17 @@
                 <legend>Informações Pessoais</legend>
                 <p>
                     <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" required><br>
+                    <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" autocomplete="name"
+                        maxlength="50" size="30" required autofocus><br>
                 </p>
                 <p>
                     <label for="sobrenome">Apelido:</label>
-                    <input type="text" id="sobrenome" name="sobrenome" required><br>
+                    <input type="text" id="sobrenome" name="sobrenome" placeholder="Digite o seu apelido"
+                        autocomplete="family-name" maxlength="50" size="30" required autofocus><br>
                 </p>
                 <p>
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" placeholder="Digite o seu email" required>
                 </p>
             </fieldset>
 
@@ -69,13 +71,20 @@
                 <input type="date" id="visitadata" name="visitadata"><br><br>
 
                 <label for="satisfacao">Quão satisfeito está com a cidade do Porto?</label>
-                <input type="range" id="satisfacao" name="satisfacao" min="0" max="10"><br><br>
+                <input type="range" id="satisfacao" name="satisfacao" min="0" max="10" step="1"><br><br>
+
+                <label for="visitas">Quantas vezes já visitou o Porto?</label>
+                <input type="number" id="visitas" name="visitas" min="0" max="100" step="1"><br><br>
+
+                <label for="visitatime">A que horas foi sua última visita ao Porto?</label>
+                <input type="time" id="visitatime" name="visitatime"><br><br>
+
+                <label for="favcolor">Qual é a cor que você associa ao Porto?</label>
+                <input type="color" id="favcolor" name="favcolor"><br><br>
             </fieldset>
 
-            <p>
-                <input type="submit" value="Submeter">
-                <input type="reset" value="Limpar">
-            </p>
+            <input type="reset" value="Limpar"><br>
+            <input type="image" src="images/submeter.png" alt="Enviar" width="100" height="100"><br>
 
         </form>
     </main>
