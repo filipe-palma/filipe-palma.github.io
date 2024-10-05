@@ -3,7 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porto</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
@@ -28,12 +30,12 @@
                 <p>
                     <label for="nome">Nome:</label>
                     <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" autocomplete="name"
-                        maxlength="50" size="30" required autofocus><br>
+                        maxlength="50" size="30" required autofocus>
                 </p>
                 <p>
                     <label for="sobrenome">Apelido:</label>
                     <input type="text" id="sobrenome" name="sobrenome" placeholder="Digite o seu apelido"
-                        autocomplete="family-name" maxlength="50" size="30" required><br>
+                        autocomplete="family-name" maxlength="50" size="30" required>
                 </p>
                 <p>
                     <label for="email">Email:</label>
@@ -44,47 +46,47 @@
             <fieldset>
                 <legend>Quizz sobre o Porto</legend>
 
-                <label>Qual é o famoso rio que passa pelo Porto?</label><br>
+                <label>Qual é o famoso rio que passa pelo Porto?</label>
                 <input type="radio" id="douro" name="rio" value="Douro">
-                <label for="douro">Douro</label><br>
+                <label for="douro">Douro</label>
                 <input type="radio" id="tejo" name="rio" value="Tejo">
-                <label for="tejo">Tejo</label><br>
+                <label for="tejo">Tejo</label>
                 <input type="radio" id="minho" name="rio" value="Minho">
-                <label for="minho">Minho</label><br><br>
+                <label for="minho">Minho</label>
 
-                <label>Selecione os pontos turísticos famosos do Porto:</label><br>
+                <label>Selecione os pontos turísticos famosos do Porto:</label>
                 <input type="checkbox" id="clerigos" name="monumento" value="Torre dos Clérigos">
-                <label for="clerigos">Torre dos Clérigos</label><br>
+                <label for="clerigos">Torre dos Clérigos</label>
                 <input type="checkbox" id="serralves" name="monumento" value="Fundação de Serralves">
-                <label for="serralves">Fundação de Serralves</label><br>
+                <label for="serralves">Fundação de Serralves</label>
                 <input type="checkbox" id="livraria" name="monumento" value="Livraria Lello">
-                <label for="livraria">Livraria Lello</label><br><br>
+                <label for="livraria">Livraria Lello</label>
 
                 <label for="populacao">Qual é a população aproximada do Porto?</label>
                 <select id="populacao" name="populacao">
                     <option value="200000">200,000</option>
                     <option value="500000">500,000</option>
                     <option value="1000000">1,000,000</option>
-                </select><br><br>
+                </select>
 
                 <label for="visitadata">Quando foi a última vez que visitou o Porto?</label>
-                <input type="date" id="visitadata" name="visitadata"><br><br>
+                <input type="date" id="visitadata" name="visitadata">
 
                 <label for="satisfacao">Quão satisfeito está com a cidade do Porto?</label>
-                <input type="range" id="satisfacao" name="satisfacao" min="0" max="10" step="1"><br><br>
+                <input type="range" id="satisfacao" name="satisfacao" min="0" max="10" step="1">
 
                 <label for="visitas">Quantas vezes já visitou o Porto?</label>
-                <input type="number" id="visitas" name="visitas" min="0" max="100" step="1"><br><br>
+                <input type="number" id="visitas" name="visitas" min="0" max="100" step="1">
 
                 <label for="visitatime">A que horas foi sua última visita ao Porto?</label>
-                <input type="time" id="visitatime" name="visitatime"><br><br>
+                <input type="time" id="visitatime" name="visitatime">
 
                 <label for="favcolor">Qual é a cor que você associa ao Porto?</label>
-                <input type="color" id="favcolor" name="favcolor"><br><br>
+                <input type="color" id="favcolor" name="favcolor">
             </fieldset>
 
-            <input type="reset" value="Limpar"><br>
-            <input type="image" src="images/submeter.png" alt="Enviar" width="100" height="100"><br>
+            <input type="reset" value="Limpar">
+            <input type="image" src="images/submeter.png" alt="Enviar" width="100" height="100">
 
         </form>
     </main>
