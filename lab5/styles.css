@@ -5,6 +5,54 @@ body {
     padding: 0;
 }
 
+div{
+    margin: 30px;
+    padding: 20px;
+    background-color: #dcc8c8;
+}
+
+div h3{
+    margin: 30px;
+    padding: 20px;
+    background-color: #bba9a9;
+}
+
+div ul{
+    margin: 30px;
+    padding: 20px;
+    background-color: #bba9a9;
+}
+
+div ol{
+    margin: 30px;
+    padding: 20px;
+    background-color: #bba9a9;
+}
+
+div h2{
+    margin: 30px;
+    padding: 20px;
+    background-color: #bba9a9;
+}
+
+div p{
+    margin: 30px;
+    padding: 20px;
+    background-color: #bba9a9;
+}
+
+div iframe{
+    margin: 30px;
+    padding: 20px;
+    background-color: #bba9a9;
+}
+
+div table{
+    margin: 30px;
+    padding: 20px;
+    background-color: #bba9a9;
+}
+
 header{
     background-color: #0ab9c5;
     color: white;
@@ -32,9 +80,10 @@ nav a:hover {
 }
 
 section img {
-    width: 10%;
+    width: 50%;
     height: auto;
     margin: 20px 0;
+    border-radius: 8px;
 }
 
 main{
@@ -80,4 +129,3 @@ label, input {
     display: block;
     margin-bottom: 10px;
 }
-
