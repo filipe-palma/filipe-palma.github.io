@@ -5,52 +5,60 @@ body {
     padding: 0;
 }
 
-div{
+.divisao{
     margin: 30px;
     padding: 20px;
-    background-color: #dcc8c8;
+    background-color: #9b9999;
+    border-radius: 8px;
 }
 
-div h3{
+.divisao h3{
     margin: 30px;
     padding: 20px;
-    background-color: #bba9a9;
+    background-color: #bdbcbc;
+    border-radius: 8px;
 }
 
-div ul{
+.divisao ul{
     margin: 30px;
     padding: 20px;
-    background-color: #bba9a9;
+    background-color: #bdbcbc;
+    border-radius: 8px;
 }
 
-div ol{
+.divisao ol{
     margin: 30px;
     padding: 20px;
-    background-color: #bba9a9;
+    background-color: #bdbcbc;
+    border-radius: 8px;
 }
 
-div h2{
+.divisao h2{
     margin: 30px;
     padding: 20px;
-    background-color: #bba9a9;
+    background-color: #bdbcbc;
+    border-radius: 8px;
 }
 
-div p{
+.divisao p{
     margin: 30px;
     padding: 20px;
-    background-color: #bba9a9;
+    background-color: #bdbcbc;
+    border-radius: 8px;
 }
 
-div iframe{
+.divisao iframe{
     margin: 30px;
     padding: 20px;
-    background-color: #bba9a9;
+    background-color: #bdbcbc;
+    border-radius: 8px;
 }
 
-div table{
+.divisao table{
     margin: 30px;
     padding: 20px;
-    background-color: #bba9a9;
+    background-color: #bdbcbc;
+    border-radius: 8px;
 }
 
 header{
@@ -79,11 +87,17 @@ nav a:hover {
     padding: 5px;
 }
 
-section img {
+.imagemPrincipal img {
     width: 50%;
     height: auto;
     margin: 20px 0;
     border-radius: 8px;
+}
+
+section img {
+    width: 10%;
+    height: auto;
+    margin: 20px 0;
 }
 
 main{
