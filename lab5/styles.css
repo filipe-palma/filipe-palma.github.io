@@ -1,3 +1,8 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -8,63 +13,89 @@ body {
 .divisao{
     margin: 30px;
     padding: 20px;
-    background-color: #9b9999;
+    background-color: #0ab9c5;
     border-radius: 8px;
 }
 
 .divisao h3{
     margin: 30px;
     padding: 20px;
-    background-color: #bdbcbc;
+    background-color: #ac4848;
     border-radius: 8px;
 }
 
 .divisao ul{
     margin: 30px;
     padding: 20px;
-    background-color: #bdbcbc;
+    background-color: #ac4848;
     border-radius: 8px;
+    list-style-type: circle;
+}
+
+.divisao ul li:nth-child(2n){
+    color: #0395ba;
+}
+
+.divisao ul li:nth-child(2n+1){
+    color: #1504fd;
 }
 
 .divisao ol{
     margin: 30px;
     padding: 20px;
-    background-color: #bdbcbc;
+    background-color: #ac4848;
     border-radius: 8px;
+    list-style-type: upper-roman;
 }
 
 .divisao h2{
     margin: 30px;
     padding: 20px;
-    background-color: #bdbcbc;
+    background-color: #ac4848;
     border-radius: 8px;
 }
 
 .divisao p{
     margin: 30px;
     padding: 20px;
-    background-color: #bdbcbc;
+    background-color: #ac4848;
     border-radius: 8px;
 }
 
 .divisao iframe{
     margin: 30px;
     padding: 20px;
-    background-color: #bdbcbc;
+    background-color: #ac4848;
     border-radius: 8px;
+}
+
+.divisao table tr:nth-child(odd) td:nth-child(odd){
+    color: #ffffff;
+    background-color: #0ab9c5;
 }
 
 .divisao table{
     margin: 30px;
     padding: 20px;
-    background-color: #bdbcbc;
+    background-color: #ac4848;
     border-radius: 8px;
+}
+
+.divisao li{
+    margin: 30px;
+    font-size: 2em;
+}
+
+.divisao p{
+    line-height: 1.4;
+    font-size: 16px;
 }
 
 header{
     background-color: #0ab9c5;
     color: white;
     text-align: center;
+    text-transform: uppercase;
     padding: 20px;
 }
 
@@ -142,4 +173,48 @@ input {
 label, input {
     display: block;
     margin-bottom: 10px;
+}
+
+a img {
+    cursor: zoom-in;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+nav a:link {
+    color: white;
+}
+
+nav a:visited {
+    color: lightgray;
+}
+
+nav a:hover {
+    color: black;
+    background-color: #0ab9c5;
+    padding: 5px;
+}
+
+nav a:active {
+    color: red;
+}
+
+/* Pseudo-elementos before e after */
+nav a::before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    vertical-align: middle;
+    transition: width 0.3s ease;
+    margin-right: 5px;
+}
+
+nav a:hover::before {
+    width: 10px;
 }

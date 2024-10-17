@@ -5,6 +5,15 @@
     box-sizing: border-box;
 }
 
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+body{
+    background-color: #0ab9c5;
+}
+
 /* Estilos do Cabeçalho */
 header {
     position: sticky;
@@ -30,7 +39,7 @@ nav a:last-child {
 nav a:hover {
     background-color: #0ab9c5;
     color: black;
-    padding: 30px;
+    padding: 50px;
 }
 
 /* Estilo da Seção Poema */
@@ -39,13 +48,17 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     height: 50vh;
-    background-color: #f5f5f5;
+    background-color: #0ab9c5;
     flex-direction: column;
     text-align: center;
 }
 
 #poema p:first-child {
     font-style: italic;
+}
+
+#poema p{
+    white-space: pre-line;
 }
 
 /* Estilo da Seção Paisagem */
@@ -71,7 +84,7 @@ nav a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: #eee;
+    background-color: #0ab9c5;
 }
 
 #cidades section {
@@ -87,7 +100,7 @@ nav a:hover {
 }
 
 #cidades div {
-    background-color: #ccc;
+    background-color: #ac4848;
     width: 100px;
     height: 100%;
     text-align: center;
