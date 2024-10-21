@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0ab9c5;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px;
+}
+
+#imagem_menu {
+    display: flex;
+    justify-content: center;
+
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#imagem_menu img {
+    display: flex;
+    height: 100%;
+    width: 100vw;
+    border-radius: 6px;
+}
+
+iframe {
+    display: block;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 6px;
+
+    background-color: #ffffff;
+}
+
+nav {
+    display: flexbox;
+    background-color: #ac4848;
+    padding: 10px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #0ab9c5;
+    color: black;
+    padding: 5px;
+}
+
+.imagemPrincipal img {
+    width: 50%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+section img {
+    width: 10%;
+    height: auto;
+    margin: 20px 0;
+}
+
+main {
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+#fotografias h3,
+#video h3,
+#poema h3 {
+    color: #0ab9c5;
+    font-size: 24px;
+    border-bottom: 2px solid #0ab9c5;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.poema {
+    font-style: italic;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    text-align: justify;
+    white-space: pre-line;
+}
+
+label {
+    font-size: small;
+}
+
+input {
+    font-size: medium;
+}
+
+label,
+input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+a img {
+    cursor: zoom-in;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    /* Remove o sublinhado */
+}
+
+nav a:link {
+    color: white;
+}
+
+nav a:visited {
+    color: lightgray;
+}
+
+nav a:hover {
+    color: black;
+    background-color: #0ab9c5;
+    padding: 5px;
+}
+
+nav a:active {
+    color: red;
+}
+
+/* Pseudo-elementos before e after */
+nav a::before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    vertical-align: middle;
+    transition: width 0.3s ease;
+    margin-right: 5px;
+}
+
+nav a:hover::before {
+    width: 10px;
+}
+
+.divisao {
+    margin: 15px;
+    padding: 15px;
+    background-color: #0ab9c5;
+    border-radius: 8px;
+}
+
+.divisao h3 {
+    padding: 20px;
+    background-color: #ac4848;
+    border-radius: 8px;
+}
+
+.divisao ul {
+    padding: 20px;
+    background-color: #ac4848;
+    border-radius: 8px;
+    list-style-type: circle;
+}
+
+.divisao ul li:nth-child(2n) {
+    color: #0395ba;
+}
+
+.divisao ul li:nth-child(2n+1) {
+    color: #1504fd;
+}
+
+.divisao ol {
+    padding: 20px;
+    background-color: #ac4848;
+    border-radius: 8px;
+    list-style-type: upper-roman;
+}
+
+.divisao h2 {
+    padding: 20px;
+    background-color: #ac4848;
+    border-radius: 8px;
+}
+
+.divisao p {
+    padding: 20px;
+    background-color: #ac4848;
+    border-radius: 8px;
+}
+
+.divisao iframe {
+    display: block;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 6px;
+    background-color: #ac4848;
+}
+
+.divisao table {
+    width: 100%;
+    
+    margin: 20px 0;
+    border-radius: 6px;
+
+    font-size: 18px;
+    text-align: center;
+}
+
+.divisao table tr:nth-child(odd) td:nth-child(odd) {
+    color: #ffffff;
+    background-color: #00bad3;
+}
+
+.divisao td {
+    padding: 10px 15px;
+}
+
+.divisao tr:nth-child(even) {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.divisao tr {
+    color: #ffffff;
+    background-color: #ac4848;
+}
+
+.divisao li {
+    margin-bottom: 6px;
+    font-size: 2em;
+}
+
+.divisao p {
+    line-height: 1.4;
+    font-size: 16px;
+}

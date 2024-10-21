@@ -3,14 +3,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-s
 }
 
-* {
-    font-family: 'Roboto', sans-serif;
-}
-
-
-body{
+body {
     background-color: #0ab9c5;
 }
 
@@ -57,7 +53,7 @@ nav a:hover {
     font-style: italic;
 }
 
-#poema p{
+#poema p {
     white-space: pre-line;
 }
 
@@ -113,16 +109,30 @@ nav a:hover {
 }
 
 /* Seção de Experimentação */
-#experimenta .circle {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+#experimenta {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    background-color: #4CAF50;
-    color: white;
 }
+
+#experimenta div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    border-radius: 50px;
+
+    visibility: hidden;
+    background-color: #a9f5ff;
+}
+
+#experimenta:hover div {
+    visibility: visible;
+}
+
 
 .hidden-hover {
     visibility: hidden;
@@ -130,4 +140,73 @@ nav a:hover {
 
 .hidden-hover:hover {
     visibility: visible;
+}
+
+.parallax {
+    background-image: url('images/tokyo.jpg');
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.parallax-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.gallery-item {
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.1);
+}
+
+.gallery-item:nth-child(3) img:hover {
+    opacity: 0.5;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fadeIn 2s ease-in-out;
 }
