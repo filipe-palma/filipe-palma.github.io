@@ -43,24 +43,25 @@ footer {
 }
 
 /* Mobile Landscape (481px a 768px) */
-@media (max-width:767px)and(orientation:landscape) {
+@media (max-width: 824px)and(orientation:landscape) {
     body {
         display: grid;
         width: 100vw;
         height: 100vh;
 
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 10% auto 1fr 10%;
+        grid-template-rows: 10% auto 1fr;
         grid-template-areas: 
             'header-area header-area'
-            'nav-area aside-area'
+            'nav-area nav-area'
+            'aside-area aside-area'
             'main-area main-area'
             'footer-area footer-area';
     }
 }
 
 /* Tablet */
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023px) and (orientation:portrait) {
     body {
         display: grid;
         width: 100vw;
