@@ -183,11 +183,13 @@ nav a:hover::before {
 
 .divisao h3 {
     padding: 20px;
+    margin: 20px;
     background-color: #ac4848;
     border-radius: 8px;
 }
 
 .divisao ul {
+    margin: 20px;
     padding: 20px;
     background-color: #ac4848;
     border-radius: 8px;
@@ -203,6 +205,7 @@ nav a:hover::before {
 }
 
 .divisao ol {
+    margin: 20px;
     padding: 20px;
     background-color: #ac4848;
     border-radius: 8px;
@@ -210,12 +213,14 @@ nav a:hover::before {
 }
 
 .divisao h2 {
+    margin: 20px;
     padding: 20px;
     background-color: #ac4848;
     border-radius: 8px;
 }
 
 .divisao p {
+    margin: 20px;
     padding: 20px;
     background-color: #ac4848;
     border-radius: 8px;
@@ -248,7 +253,7 @@ nav a:hover::before {
 }
 
 .divisao td {
-    padding: 10px 15px;
+    padding: 0x 0px;
 }
 
 .divisao tr:nth-child(even) {
