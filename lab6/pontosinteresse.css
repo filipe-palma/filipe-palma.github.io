@@ -11,6 +11,7 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    display: grid;
 }
 
 header {
@@ -87,6 +88,7 @@ main {
     background-color: white;
     margin: 20px;
     border-radius: 8px;
+    display: grid;
 }
 
 footer {
@@ -175,13 +177,17 @@ nav a:hover::before {
 }
 
 .divisao {
+    justify-content: center;
     margin: 15px;
     padding: 15px;
     background-color: #0ab9c5;
     border-radius: 8px;
+    display: grid;
 }
 
 .divisao h3 {
+    justify-content: center;
+    display: grid;
     padding: 20px;
     margin: 20px;
     background-color: #ac4848;
@@ -189,11 +195,14 @@ nav a:hover::before {
 }
 
 .divisao ul {
+    justify-content: center;
+    display: grid;
     margin: 20px;
     padding: 20px;
     background-color: #ac4848;
     border-radius: 8px;
     list-style-type: circle;
+    list-style-position: inside;
 }
 
 .divisao ul li:nth-child(2n) {
@@ -205,14 +214,19 @@ nav a:hover::before {
 }
 
 .divisao ol {
+    justify-content: center;
+    display: grid;
     margin: 20px;
     padding: 20px;
     background-color: #ac4848;
     border-radius: 8px;
     list-style-type: upper-roman;
+    list-style-position: inside;
 }
 
 .divisao h2 {
+    justify-content: center;
+    display: grid;
     margin: 20px;
     padding: 20px;
     background-color: #ac4848;
@@ -220,6 +234,8 @@ nav a:hover::before {
 }
 
 .divisao p {
+    justify-content: center;
+    display: grid;
     margin: 20px;
     padding: 20px;
     background-color: #ac4848;
@@ -227,7 +243,7 @@ nav a:hover::before {
 }
 
 .divisao iframe {
-    display: block;
+    display: grid;
     justify-content: center;
 
     width: 100%;
@@ -238,6 +254,8 @@ nav a:hover::before {
 }
 
 .divisao table {
+    justify-content: center;
+    display: grid;
     width: 100%;
     
     margin: 20px 0;
@@ -253,7 +271,7 @@ nav a:hover::before {
 }
 
 .divisao td {
-    padding: 0x 0px;
+    padding: 15px 15px;
 }
 
 .divisao tr:nth-child(even) {
