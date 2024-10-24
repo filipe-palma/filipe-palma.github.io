@@ -21,7 +21,6 @@ header {
 }
 
 nav {
-    display: flexbox;
     width: 100%;
     padding: 15px;
     text-align: center;
@@ -32,7 +31,7 @@ nav a {
     color: white;
     background-color: #5b5b5b;
     margin: 0 15px;
-    padding: 10px 10px;
+    padding: 20px 20px;
     text-decoration: none;
     border-radius: 8px;
 }
@@ -73,12 +72,8 @@ nav a:link {
 nav a:hover {
     background-color: #000000;
     margin: 0 20px;
-    padding: 10px 10px;
+    padding: 20px 20px;
     border-radius: 8px;
-}
-
-nav a:active {
-    color: red;
 }
 
 h2{
@@ -112,5 +107,9 @@ ul{
     padding: 15px;
     background-color: #ffffff;
     border-radius: 8px;
+}
+
+.painel{
+    display: flex;
 }
 
