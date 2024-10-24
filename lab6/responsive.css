@@ -43,14 +43,14 @@ footer {
 }
 
 /* Mobile Landscape (481px a 768px) */
-@media (max-width: 824px)and(orientation:landscape) {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
     body {
         display: grid;
         width: 100vw;
         height: 100vh;
 
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 10% auto 1fr;
+        grid-template-rows: 20% auto 1fr;
         grid-template-areas: 
             'header-area header-area'
             'nav-area nav-area'
@@ -61,7 +61,7 @@ footer {
 }
 
 /* Tablet */
-@media (min-width: 768px) and (max-width: 1023px) and (orientation:portrait) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
     body {
         display: grid;
         width: 100vw;
@@ -79,23 +79,35 @@ footer {
 }
 
 /* Laptop e Desktop (1025px a 1440px) */
-@media (min-width: 1024px) and (max-width: 1440px) {
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+    body{
+        display: grid;
+        width: 100%;
+        height: 100%;
 
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:'header-area'
+                            'nav-area'
+                            'aside-area'
+                            'main-area'
+                            'footer-area';
+    }
 }
 
 /* 4K (1441px e superior) */
-@media (min-width: 2560px) {
+@media only screen and (min-width: 1441px) {
     body {
         display: grid;
-        width: 100vw;
-        height: 100vh;
-        grid-template-rows: 100px 100px 1500px 1fr 90px;
+        width: 100%;
+        height: 100%;
+
         grid-template-columns: 1fr;
-        grid-template-areas:
-            'header-area'
-            'nav-area'
-            'aside-area'
-            'main-area '
-            'footer-area ';
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:'header-area'
+                            'nav-area'
+                            'aside-area'
+                            'main-area'
+                            'footer-area';
     }
 }
