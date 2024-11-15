@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos Interativos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <nav>
+        <a href="eventos.html">JavaScript 2</a>
+        <a href="\index.html">Página Inicial</a>
+    </nav>
+
+    <div class="event-row">
+        <h3 id="hoverText">1. Passa por aqui!</h3>
+    </div>
+
+    <div class="event-row">
+        <h3 id="colorText">2. Pinta-me!</h3>
+        <div class="color-buttons">
+            <button data-color="red">Red</button>
+            <button data-color="green">Green</button>
+            <button data-color="blue">Blue</button>
+        </div>
+    </div>
+
+    <div class="event-row">
+        <h3>3. Experimenta escrever...</h3>
+        <input type="text" id="textInput" placeholder="Escreva aqui...">
+    </div>
+
+    <div class="event-row">
+        <h3>4. Escolha uma cor:</h3>
+        <select id="colorSelect">
+            <option value="">Selecione...</option>
+            <option value="white">White</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+        </select>
+    </div>
+
+    <div class="event-row">
+        <h3>5.</h3>
+        <button id="counterBtn">Conta!</button>
+        <span id="countDisplay">0</span>
+    </div>
+
+    <div class="event-row">
+        <h3>6.</h3>
+        <form id="userForm">
+            <input type="text" id="userName" placeholder="Nome" required>
+            <input type="number" id="userAge" placeholder="Idade" required>
+            <button type="submit">Submeter</button>
+        </form>
+        <p id="formMessage"></p>
+    </div>    
+
+    <div class="event-row">
+        <h3>7. Automatic Counter:</h3>
+        <span id="autoCounter">0</span>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
