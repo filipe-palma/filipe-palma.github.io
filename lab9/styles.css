@@ -1,0 +1,123 @@
+/* Estilização principal */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Cabeçalho */
+header {
+    background-color: purple;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Container de produtos */
+.produtos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.produto {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 10px;
+    width: 30%;
+    text-align: center;
+}
+
+.produto img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.produto h3 {
+    color: purple;
+    margin-bottom: 10px;
+}
+
+.produto p {
+    font-size: 14px;
+    color: #555;
+}
+
+.produto button {
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.produto button:hover {
+    background-color: #5a005a;
+}
+
+/* Estilo para o cesto */
+#cesto {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: auto;
+}
+
+#cesto h2 {
+    color: purple;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#itens-cesto {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#itens-cesto li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#itens-cesto li span {
+    font-size: 14px;
+    color: #555;
+}
+
+#total-cesto {
+    font-size: 18px;
+    font-weight: bold;
+    color: purple;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+}
