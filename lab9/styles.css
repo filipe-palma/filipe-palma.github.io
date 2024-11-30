@@ -14,6 +14,14 @@ header {
     text-align: center;
 }
 
+header h1 {
+    text-align: left;
+}
+
+header nav {
+    text-align: right;
+}
+
 header nav a {
     margin: 0 15px;
     color: white;
@@ -32,6 +40,10 @@ header nav a:hover {
     padding: 20px;
 }
 
+#produtos h2{
+    text-align: center;
+}
+
 .produto {
     background: white;
     border: 1px solid #ddd;
@@ -41,6 +53,14 @@ header nav a:hover {
     margin: 10px;
     width: 30%;
     text-align: center;
+}
+
+/* Estilização da descrição do produto */
+.descricao-produto {
+    background-color: #f3f3f3;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
 }
 
 .produto img {
@@ -72,52 +92,84 @@ header nav a:hover {
 }
 
 /* Estilo para o cesto */
+/* Cesto */
 #cesto {
     padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    margin: auto;
+    background-color: purple;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px;
 }
 
 #cesto h2 {
-    color: purple;
-    font-size: 18px;
     text-align: center;
-    margin-bottom: 15px;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
 }
 
 #itens-cesto {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Três colunas */
+    justify-items: center;
+    gap: 15px;
+    margin-top: 20px;
 }
 
 #itens-cesto li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: white;
+    color: black;
+    width: 90%;
+    max-width: 300px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
 }
 
-#itens-cesto li span {
+#itens-cesto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+#itens-cesto h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+#itens-cesto .preco {
+    font-size: 16px;
+    color: #444;
+    margin: 10px 0;
+}
+
+#itens-cesto .remover {
+    background: #f44336;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     font-size: 14px;
-    color: #555;
+    transition: background 0.3s ease;
+}
+
+#itens-cesto .remover:hover {
+    background: #d32f2f;
 }
 
 #total-cesto {
-    font-size: 18px;
-    font-weight: bold;
-    color: purple;
     text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
     margin-top: 20px;
-    padding: 10px 0;
-    border-top: 1px solid #ddd;
 }
