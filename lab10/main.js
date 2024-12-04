@@ -12,67 +12,57 @@ let cesto = {};
 let total = 0;
 
 // Função para buscar produtos
-async function obterProdutos() {
-    try {
-        const response = await fetch(`${API_URL}/products/`);
-        if (!response.ok) throw new Error("Erro ao buscar produtos.");
-        const produtos = await response.json();
-        renderizarProdutos(produtos);
-    } catch (error) {
-        console.error(error);
-    }
+function obterProdutos() {
+    fetch(`${API_URL}/products/`)
+        .then(response => response.json())
+        .then(produtos => {
+            renderizarProdutos(produtos);
+        });
 }
 
-// Função para carregar categorias
-async function carregarCategorias() {
-    try {
-        const response = await fetch(`${API_URL}/categories/`);
-        if (!response.ok) throw new Error("Erro ao buscar categorias.");
-        const categorias = await response.json();
-        categorias.forEach(categoria => {
-            const option = document.createElement('option');
-            option.value = categoria;
-            option.textContent = categoria;
-            categoriaSelect.appendChild(option);
+// Função para carregar categorias 
+function carregarCategorias() {
+    fetch(`${API_URL}/categories/`)
+        .then(response => response.json())
+        .then(categorias => {
+            categorias.forEach(categoria => {
+                const option = document.createElement('option');
+                option.value = categoria;
+                option.textContent = categoria;
+                categoriaSelect.appendChild(option);
+            });
         });
-    } catch (error) {
-        console.error(error);
-    }
 }
 
 // Função para filtrar produtos
-async function filtrarProdutos() {
+function filtrarProdutos() {
     let url = `${API_URL}/products/`;
     const categoria = categoriaSelect.value;
 
-    try {
-        const response = await fetch(url);
-        if (!response.ok) throw new Error("Erro ao filtrar produtos.");
-        const produtos = await response.json();
+    fetch(url)
+        .then(response => response.json())
+        .then(produtos => {
+            let filtrados = produtos;
 
-        let filtrados = produtos;
+            if (categoria) {
+                filtrados = filtrados.filter(produto => produto.category === categoria);
+            }
 
-        if (categoria) {
-            filtrados = filtrados.filter(produto => produto.category === categoria);
-        }
+            if (ordenacaoSelect.value === "asc") {
+                filtrados.sort((a, b) => a.price - b.price);
+            } else if (ordenacaoSelect.value === "desc") {
+                filtrados.sort((a, b) => b.price - a.price);
+            }
 
-        if (ordenacaoSelect.value === "asc") {
-            filtrados.sort((a, b) => a.price - b.price);
-        } else if (ordenacaoSelect.value === "desc") {
-            filtrados.sort((a, b) => b.price - a.price);
-        }
+            const termoPesquisa = pesquisaInput.value.toLowerCase();
+            if (termoPesquisa) {
+                filtrados = filtrados.filter(produto =>
+                    produto.title.toLowerCase().includes(termoPesquisa)
+                );
+            }
 
-        const termoPesquisa = pesquisaInput.value.toLowerCase();
-        if (termoPesquisa) {
-            filtrados = filtrados.filter(produto =>
-                produto.title.toLowerCase().includes(termoPesquisa)
-            );
-        }
-
-        renderizarProdutos(filtrados);
-    } catch (error) {
-        console.error(error);
-    }
+            renderizarProdutos(filtrados);
+        });
 }
 
 // Renderizar produtos
@@ -87,6 +77,10 @@ function renderizarProdutos(produtos) {
             <img src="${produto.image}" alt="${produto.title}">
             <p class="descricao-produto">${produto.description}</p>
             <p><strong>Preço:</strong> ${produto.price.toFixed(2)} €</p>
+            <p>
+                <strong>Avaliações:</strong> 
+                <span>${produto.rating.rate.toFixed(1)} ⭐ (${produto.rating.count} avaliações)</span>
+            </p>
             <button data-id="${produto.id}">+ Adicionar ao Cesto</button>
         `;
         containerProdutos.appendChild(produtoArticle);
@@ -126,6 +120,10 @@ function atualizarCesto() {
                 <img src="${item.image}" alt="${item.title}" style="width: 150px; height: auto; margin-bottom: 10px;">
                 <p style="margin: 5px 0; font-weight: bold;">Custo total: ${(item.price * item.quantidade).toFixed(2)} €</p>
                 <p style="margin: 5px 0;">Quantidade: ${item.quantidade}</p>
+                <p>
+                <strong>Avaliações:</strong> 
+                <span>${item.rating.rate.toFixed(1)} ⭐ (${item.rating.count} avaliações)</span>
+                </p>
                 <button class="remover" data-id="${item.id}" style="background-color: #ff4d4d; color: white; border: none; padding: 5px 10px; cursor: pointer; border-radius: 5px;">
                   - Remover do Cesto
                 </button>
@@ -146,36 +144,30 @@ function salvarCesto() {
     localStorage.setItem('cesto', JSON.stringify(cesto));
 }
 
-async function realizarCompra() {
+function realizarCompra() {
     const estudante = estudanteCheckbox.checked;
     const cupao = cupaoInput.value.trim();
 
-    try {
-        const response = await fetch(`${API_URL}/buy/`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                products: Object.keys(cesto).map(id => parseInt(id)),
-                student: estudante,
-                coupon: cupao || null
-            })
-        });
-
-        if (!response.ok) throw new Error("Erro ao realizar compra.");
-        const resultado = await response.json();
-
-        resumoCompra.innerHTML = `
+    fetch(`${API_URL}/buy/`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            products: Object.keys(cesto).map(id => parseInt(id)),
+            student: estudante,
+            coupon: cupao || null
+        })
+    })
+        .then(response => response.json())
+        .then(resultado => {
+            resumoCompra.innerHTML = `
             <p><strong>Referência de Pagamento:</strong> ${resultado.reference}</p>
             <p><strong>Total com Descontos:</strong> ${resultado.totalCost} €</p>
         `;
 
-        cesto = {};
-        salvarCesto();
-        atualizarCesto();
-    } catch (error) {
-        console.error(error);
-        resumoCompra.innerHTML = `<p style="color: red;">Erro ao processar a compra.</p>`;
-    }
+            cesto = {};
+            salvarCesto();
+            atualizarCesto();
+        });
 }
 
 document.getElementById('comprar').addEventListener('click', realizarCompra);
