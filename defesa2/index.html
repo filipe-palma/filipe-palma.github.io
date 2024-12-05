@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lit Store</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>
+      <img src="images/deisi-inverse.svg" alt="Lit Store Logo" style="height: 50px;">
+      Lit Store🔥
+    </h1>
+    <nav>
+      <a href="#produtos">Produtos</a>
+      <a href="#cesto">Cesto</a>
+    </nav>
+  </header>
+  <main>
+    <section id="produtos">
+      <h2>Selecione os seus Produtos</h2>
+      <section id="filtros">
+        <label for="categoria">Categoria:</label>
+        <select id="categoria">
+          <option value="">Todas</option>
+        </select>
+
+        <label for="ordenacao">Ordenar por:</label>
+        <select id="ordenacao">
+          <option value="asc">Preço Crescente</option>
+          <option value="desc">Preço Decrescente</option>
+          <option value="rating">Avaliações</option>
+        </select>
+
+        <input type="text" id="pesquisa" placeholder="Pesquisar produtos">
+
+        <section class="acoes-produtos">
+          <button id="remover-desc">Menos Info</button>
+          <button id="remove-todos">Remover Todos</button>
+        </section>
+      </section>
+      <article id="lista-produtos" class="produtos-container"></article>
+    </section>
+    <section id="cesto">
+      <h2>Produtos Selecionados</h2>
+      <ul id="itens-cesto"></ul>
+      <section class="pagamento-section">
+        <p id="total-cesto"><strong>Total:</strong> 0 €</p>
+
+        <label for="nome" class="inline-element">Nome:</label>
+        <input type="text" id="nome" placeholder="Insira o nome" class="inline-element">
+
+        <label for="cupao" class="inline-element">Cupão de desconto:</label>
+        <input type="text" id="cupao" placeholder="Insira o cupão" class="inline-element">
+
+        <label for="estudante" class="inline-element">
+          Sou estudante <input type="checkbox" id="estudante">
+        </label>
+
+        <button id="comprar">Comprar</button>
+        <section id="resumo-compra" style="margin-top: 20px;"></section>
+      </section>
+    </section>
+  </main>
+  <script src="main.js"></script>
+  <footer>
+    <p>Filipe Palma, Universidade Lusófona, 2024</p>
+  </footer>
+</body>
+
+</html>
