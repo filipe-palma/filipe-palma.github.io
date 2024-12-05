@@ -15,6 +15,14 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed; /* Make header fixed */
+    width: 100%; /* Full width */
+    top: 0; /* Stick to top */
+    z-index: 1000; /* Ensure header stays on top of other content */
+}
+
+main {
+    padding-top: 90px; /* Adjust this value based on your header height */
 }
 
 header h1 {
@@ -33,13 +41,10 @@ header h1 img {
 }
 
 header nav a {
-    margin: 0;
-}
-
-header nav a {
     margin: 0 15px;
     color: white;
     text-decoration: none;
+    margin-right: 20px;
 }
 
 header nav a:hover {
