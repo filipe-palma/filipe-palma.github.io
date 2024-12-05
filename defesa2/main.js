@@ -72,8 +72,10 @@ function filtrarProdutos() {
                 filtrados.sort((a, b) => a.price - b.price);
             } else if (ordenacaoSelect.value === "desc") {
                 filtrados.sort((a, b) => b.price - a.price);
-            } else if (ordenacaoSelect.value === "rating") {
+            } else if (ordenacaoSelect.value === "ratingdesc") {
                 filtrados.sort((a, b) => b.rating.count - a.rating.count);
+            } else if (ordenacaoSelect.value === "ratingasc") {
+                filtrados.sort((a, b) => a.rating.count - b.rating.count);
             }
 
             const termoPesquisa = pesquisaInput.value.toLowerCase();
